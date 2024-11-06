@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "easy-leasy"
-version = "1.0.0"
+version = "1.0.1"
 description = "Easy Leasy is a time set manipulation library"
 authors = ["Rémy Sanchez <remy.sanchez@hyperthese.net>"]
 license = "WTFPL"
@@ -12,12 +12,12 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.10"
 python-dateutil = "*"
-coverage = "^7.6.4"
 lark = "*"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
 ruff = "*"
+coverage = "*"
 
 [build-system]
 requires = ["poetry-core"]

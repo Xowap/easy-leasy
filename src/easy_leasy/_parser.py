@@ -244,10 +244,14 @@ class EasyLeasyTransformer(Transformer):
                 return self.resolve_references(stmt.value, variables)
 
 
-def parse_easy_leasy(expr, context=None):
+def parse_easy_leasy(
+    expr: str, context: dict[str, bool | BaseTimeSet] | None = None
+) -> BaseTimeSet:
     parser = Lark(
         grammar,
         parser="lalr",
         transformer=EasyLeasyTransformer(context or {}),
     )
+
+    # noinspection PyTypeChecker
     return parser.parse(expr)
