@@ -1,0 +1,7 @@
+.idea/
+.vscode/
+
+*.swp
+*.un~
+
+*.py[co]
